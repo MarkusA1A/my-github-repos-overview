@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const GITHUB_PAT = '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'; // Dein GitHub Personal Access Token
+    const GITHUB_PAT = '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'; // Dein GitHub Personal Access Token
     const GITHUB_API_URL = 'https://api.github.com/user/repos?type=owner&sort=updated&direction=desc';
     const repositoryList = document.getElementById('repositoryList');
     const searchInput = document.getElementById('searchInput');
