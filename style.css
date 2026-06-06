@@ -1,0 +1,162 @@
+/* Allgemeiner Stil */
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d6e4f; /* Forest Green */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Controls (Search & Sort) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.controls input[type="text"],
+.controls select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-grow: 1;
+    max-width: 300px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls input[type="text"]:focus,
+.controls select:focus {
+    border-color: #0d6e4f; /* Forest Green */
+    box-shadow: 0 0 0 2px rgba(13, 110, 79, 0.2);
+    outline: none;
+}
+
+/* Repository Liste */
+.repository-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.repository-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.repository-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.repository-card h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: #0d6e4f; /* Forest Green */
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.repository-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.repository-card .description {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.repository-card .last-updated {
+    font-size: 0.85rem;
+    color: #888;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+.repository-card .links {
+    margin-top: auto; /* Push links to the bottom */
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.repository-card a {
+    display: inline-flex;
+    align-items: center;
+    color: #0d6e4f; /* Forest Green */
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+.repository-card a:hover {
+    color: #074a33; /* Darker green on hover */
+}
+
+.repository-card a svg {
+    margin-right: 0.5rem;
+    fill: currentColor;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: #eee;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.loading-message,
+.no-results-message {
+    grid-column: 1 / -1; /* Span across all columns */
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input[type="text"],
+    .controls select {
+        max-width: 100%;
+    }
+}

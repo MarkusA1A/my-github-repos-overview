@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories & Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Outfit:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Meine GitHub Repositories</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Nach Repository suchen...">
+            <select id="sortSelect">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="updated-desc">Zuletzt aktualisiert (Neu zuerst)</option>
+                <option value="updated-asc">Zuletzt aktualisiert (Alt zuerst)</option>
+            </select>
+        </div>
+        <div id="repositoryList" class="repository-grid">
+            <p class="loading-message">Lade Repositories...</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 GitHub Repository Übersicht. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
